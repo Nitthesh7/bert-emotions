@@ -59,7 +59,7 @@ def train_run():
         f1_macro_avg = f1_score(targets, outputs, average='macro')
         hamming_loss_ = hamming_loss(targets, outputs)
 
-        print(f'Epoch: {epoch+1} | Precision: {precision_macro_avg} | Recall: {recall_macro_avg} | f1-score = {f1_macro_avg} | Hamming Loss: {hamming_loss_}')
+        print(f'Epoch: {epoch+1} | Precision: {precision_macro_avg} | Recall: {recall_macro_avg} | F1-score = {f1_macro_avg} | Hamming Loss: {hamming_loss_}')
     
     # saving the model
     torch.save(bert_model.state_dict(), config.MODEL_PATH)
